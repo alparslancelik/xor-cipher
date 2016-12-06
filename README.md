@@ -1,5 +1,7 @@
-# xor_cipher
-FPGA implementation of simple XOR cipher
+# FPGA implementation of simple XOR cipher
+Its objective is to encrypt or decrypt the plain text using a key. It is coded in Verilog. 
+Due to the limited storage, smaller key size is preferred. Moreover, gLCD interface is used 
+to demonstrate results and RS232 used to acquire data form a computer connection.
 
 Block Diagram of Simple XOR Cipher
 ----------------------------------
@@ -8,9 +10,6 @@ Block Diagram of Simple XOR Cipher
 
 Module Descriptions
 -------------------
-**top_module**
-* It contains two sub-module which are controller and datapath. 
-
 **etext_RAM**
 * It is specifically used to store output of the encrypter/decrypter block. The output is the encrypted data that is obtained from the encrypter/decrypter block and passes the information using its one read signal to the Connecter block in order to display information on the gLCD module.
 * The data it holds can be obtained in one clock cycle. Thus, there are no particular timing constraints for this module.
